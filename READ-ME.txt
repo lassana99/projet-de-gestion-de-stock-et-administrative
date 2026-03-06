@@ -1,0 +1,34 @@
+**Laravel POS System**
+Author: Join Coder(www.youtube.com/@joincoder)
+
+This is a Point of Sale (POS) System built with Laravel.
+The project is shared for free as part of my learning journey.
+Feel free to explore, modify, and improve it! 
+
+**About the Template**
+This project uses a free UI template and was not built entirely from scratch.
+Because of this, some unnecessary files might be included in the project folder.
+You can remove or modify them as needed.
+
+**Set Up the Database**
+Option 1: Import the mypos.sql file (found in the database/ folder).
+Option 2: Run migrations and seeders: php artisan migrate --seed
+
+
+**Google/GitHub API Credentials**
+You need to generate your own Google/GitHub API credentials and add them to the .env file.
+
+
+**Start the Laravel Development Server**
+Run the following commands to start the server:
+-> php artisan serve
+-> npm run dev
+
+**SuperAdmin Login**
+-> superadmin@gmail.com-> admin123
+
+
+
+**Contribution & License**
+This project is open-source and shared freely.
+You can use, modify, and improve it, but please give credit if you find it useful!

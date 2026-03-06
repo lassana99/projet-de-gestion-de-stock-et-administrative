@@ -1,0 +1,238 @@
+/* Sidebar */
+#output {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sidebar {
+    width: 280px;
+    min-width: 250px;
+    max-width: 300px;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.sidebar .nav-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.sidebar .nav-item .btn {
+    width: 80%;
+    background-color: #2a9877;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+
+}
+
+.sidebar .nav-item .btn i {
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.sidebar .nav-item .btn:hover {
+    background-color: #1e6322;
+    box-shadow: 0px 0px 10px rgba(238, 255, 0, 0.8);
+    transform: translateY(-2px);
+    animation: pulse 0.6s ease-in-out 2;
+}
+
+/* Bounce Icon Effect */
+.sidebar .nav-item .btn:hover i {
+    animation: bounce 0.4s ease-in-out;
+}
+
+
+
+/* Submenu for Reports*/
+.btn-secondary {
+    background-color: #1e6322;
+    color: white;
+}
+
+.nav-item .toggle-submenu {
+    margin-left: 24px;
+}
+
+.submenu a {
+    background-color: rgb(198, 216, 203);
+    color: rgb(0, 0, 0);
+    width: 80%;
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.submenu a:hover {
+    background-color: rgb(38, 78, 60);
+    color: white;
+}
+
+/* home card effect  */
+.card {
+    background: linear-gradient(135deg, darkslategray, #2a9877);
+    color: white;
+    border: none;
+
+}
+
+
+.text-primary {
+    color: #ffffff !important;
+}
+
+.text-gray-800 {
+    color: #f8f9fa !important;
+}
+
+.card:hover .col-auto i {
+    animation: bounce 0.5s ease-in-out;
+}
+
+
+/* Login Form and Register form */
+.loginform, .registerform {
+    background: linear-gradient(135deg, rgb(226, 230, 230), #dfe9e7);
+    color: black;
+    position: relative;
+    border: 3px solid #4441ff;
+    border-radius: 10px;
+    animation: slideIn 0.7s ease-out, animateBg 5.0s linear infinite;
+}
+
+
+.btn-user{
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-user:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgb(0, 4, 255);
+}
+
+/* Gestion de logo */
+
+.logo__image {
+    display: block;
+    width: 100%; /* L'image occupe toute la largeur */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    border-radius: 12px; /* Arrondit les coins de l'image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile */
+    border: 2px solid #ffffff; /* Ajoute une bordure blanche */
+    background-color: #f8f9fc; /* Ajoute un arrière-plan similaire au design */
+    margin-top: 5px; /* Descend l'image légèrement */
+}
+.sidebar-brand-icon {
+    width: 100%; /* Largeur totale du conteneur */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pagination .page-link {
+    background-color: white; /* Couleur blanche par défaut */
+    color: black; /* Texte noir par défaut */
+    border: 1px solid #ddd; /* Bordure grise */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: rgb(249, 138, 27); /* Couleur orange pour l'élément actif */
+    color: white; /* Texte blanc */
+    border: none; /* Supprime les bordures */
+}
+
+.pagination .page-link:hover {
+    background-color: rgb(230, 120, 20); /* Couleur légèrement plus foncée au survol */
+    color: white;
+}
+
+
+
+
+
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animateBg {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+/* sidebar responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px !important;
+        position: fixed;
+        height: 100%;
+        z-index: 999;
+        background-color: darkslategray;
+        left: -250px;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    #content-wrapper {
+        margin-left: 0 !important;
+    }
+}
+
+/* Sidebar  */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        position: fixed;
+        height: 100%;
+        z-index: 999;
+        left: -250px;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+}
+
+
+
+
+

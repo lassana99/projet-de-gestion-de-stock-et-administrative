@@ -5,8 +5,6 @@
     </a>
 </p>
 
-<h1 align="center">ApproLogApp</h1>
-
 <p align="center">
     <strong>Système de Gestion Administrative et de Stock Professionnel</strong><br>
     Développé avec le framework Laravel pour une gestion efficace et centralisée.
